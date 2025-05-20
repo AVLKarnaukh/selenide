@@ -20,7 +20,7 @@ public class AppCardDeliveryTaskTest {
     public void shouldBeSuccessfullyCompleted() {
         Selenide.open("http://localhost:9999");
         $("[data-test-id='city'] input").setValue("Москва");
-        String planningDate = generateDate(4, "dd.mm.yyyy");
+        String planningDate = generateDate(4, "dd.MM.yyyy");
         $("[data-test-id='date'] input").press(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.DELETE);
         $("[data-test-id='date'] input").setValue(planningDate);
         $("[data-test-id='name'] input").setValue("Карнаух Владимирович Александр");
